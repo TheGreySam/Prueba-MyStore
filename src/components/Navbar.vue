@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="main navigation">
     <div class="container">
     <!-- Brand -->
     <div class="navbar-brand">
@@ -106,9 +106,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-nav {
-  height: 3.25rem;
-  background-color: rgba(31, 202, 74, 0.219);
-}
+<style scoped>
+
 </style>

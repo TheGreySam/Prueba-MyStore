@@ -89,7 +89,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .login-container {
   padding: 2rem 1rem 0.5rem 1rem;
 }

@@ -124,15 +124,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .counter {
   display: inline-block;
-  button {
-    text-align: center;
-    border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
-    cursor: pointer;
-  }
+  
 }
 </style>
