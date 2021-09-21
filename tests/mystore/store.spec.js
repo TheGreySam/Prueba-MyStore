@@ -4,19 +4,20 @@ import Vuex from "vuex";
 
 const store = new Vuex.Store({
     state: {
+        tareas: ["salir a caminar"]
         
     }
 })
 
 const localVue = createLocalVue()
-localVue.use(Vuex)
+localVue.use(Vuex);
 
 describe("HelloWorld.vue", () => {
     it("should renders props.msg when passed", () => {
-        const msg = "new message";
-        const wrapper = shallowMount(HelloWorld, {
-            propsData: {msg},
+        const wrapper = shallowMount(ListaTareas, {
+            localVue,
+            store,
         });
-        expect(wrapper.text()).toMatch(msg);
+        expect(wrapper.text()).toMatch("salir a caminar")
     });
 })
