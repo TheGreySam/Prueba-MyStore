@@ -3,24 +3,27 @@ import App from './App.vue'
 window.$ = window.jQuery = require('jquery')
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap/dist/js/bootstrap.bundle.js";
+//import { FontawesomeIcon } from '@fortawesome/vue-fontawesome';
+//import {library} from '@fortawesome/fontawesome-svg-core';
+//import {fas} from '@fortawesome/free-solid-svg-icons';
 import VueRouter from 'vue-router'
 import router from './router'
 import store from './store'
 
 Vue.use(VueRouter)
 
+
 Vue.config.productionTip = false
 
-// Main Styles
-//import './assets/scss/main.scss'
-
-// Material Icons
-// import 'material-icons/iconfont/material-icons.css'
-// import '@mdi/font/css/materialdesignicons.css'
+//createApp(App) {
+//  .component('fa', FontawesomeIcon)
+//.mount('#app');
+//}
 
 
 new Vue({
-  router,
+//  FontawesomeIcon,
   store,
-  render: h => h(App)
+  router,
+  render: h => h(App),
 }).$mount('#app')

@@ -1,111 +1,43 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="main navigation">
-    <div class="container">
-    <!-- Brand -->
-    <div class="navbar-brand">
-      <router-link to="/" class="navbar-item">
-        {{ brand }}
-      </router-link>
-      <a role="button"
-      class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-      data-target="navbarMenu"
-      @click="displayMenu = !displayMenu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+  <nav class="navbar navbar-expand-lg navbar-dark navpizza shadow p-3 ">
+    
+    <a class="navbar-brand p-2" href="#">
+      <i class="fas fa-pizza-slice p-3" style="color:rgb(9, 104, 21)"></i>PIZZA MAYHEM</a>
+    <button 
+      class="navbar-toggler btn"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <router-link to="/inicio" class="nav-link">Inicio</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/busquedas" class="nav-link">Búsquedas</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/ventas" class="nav-link">Ventas</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/total" class="nav-link">Total</router-link>
+        </li>
+        <li>
+          <i class="fas fa-pizza-slice"></i>
+        </li>
+      </ul>
     </div>
-    <!--  -->
-    <div id="navbarMenu" class="navbar-menu" :style="displayMenuStyle">
-        <div class="navbar-start">
-          <!--
-          <a class="navbar-item">
-            Home
-          </a>
-          -->
-        </div>
-
-        <div class="navbar-end">
-          <a class="navbar-item" @click="showCart">
-            <span class="icon">
-              <i class="mdi mdi-32px mdi-cart"></i>
-              <span
-              class="tag is-warning"
-              v-if="$store.getters.shoppingCart.list.length > 0">
-                {{ $store.getters.shoppingCart.list.length }}
-              </span>
-            </span>
-          </a>
-          <router-link v-if="!isLoggedIn" to="/login" class="navbar-item">
-            Login
-          </router-link>
-          <div v-else class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-                <span class="icon">
-                  <i class="mdi mdi-32px mdi-account"></i>
-                </span>
-                Usuario
-            </a>
-
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                Preferencias
-              </a>
-              <a class="navbar-item" @click="showCart">
-                Ver Carrito
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item" @click="logout">
-                Cerrar Sesión
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!--  -->
-    </div> <!-- container -->
   </nav>
 </template>
 
 <script>
-export default {
-  name: '',
-  components: {},
-  props: {
-    brand: {
-      type: String,
-      default: '',
-    },
-  },
-  data() {
-    return {
-      displayMenu: true,
-    }
-  },
-  methods: {
-    showCart(event) {
-      event.preventDefault();
-      this.$store.dispatch('updateShowCart', true)
-    },
-    logout() {
-      this.$store.dispatch('updateUser', undefined)
-      this.$router.push('/')
-    }
-  },
-  computed: {
-    displayMenuStyle() {
-      return { display: this.displayMenu ? 'block' : 'none' }
-    },
-    isLoggedIn() {
-      return this.$store.getters.isLoggedIn
-    }
-  },
-  watch: {},
-  created() {},
-  mounted() {}
-}
+export default {};
 </script>
 
-<style scoped>
-
-</style>
+<style></style>
