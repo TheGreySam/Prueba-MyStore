@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Navbar />
+    <Carousel />
     
     <transition name="vista" >
       <router-view class="bgpizza p-3"></router-view>
@@ -11,20 +12,28 @@
 
 <script>
 import Navbar from "./components/Navbar.vue";
-import Footer from './components/Footer.vue'
+import Footer from './components/Footer.vue';
+import Carousel from "./components/Carousel.vue";
 
 export default {
-  components: {Navbar, Footer},
+  components: {Navbar, Footer, Carousel},
   name: "App"
 }
 </script>
 
 <style scoped>
+#app {
+      font-family: 'Fredericka the Great', cursive;
+      background-color: rgb(228, 194, 0);
+      
+}
+
 .bgpizza {
   background-color: rgb(228, 194, 0);
 } 
 .navpizza {
   background-color: rgb(175, 35, 0);
+  
 } 
 .logopizza {
   color:rgb(9, 104, 21)
@@ -33,7 +42,8 @@ export default {
   position:fixed;
   bottom:0;
   color:snow;
-  width: 100%
+  width: 100%;
+  font-weight: lighter;
 }
 
 .vista-enter-active, .vista-leave-active {

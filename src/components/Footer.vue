@@ -12,7 +12,7 @@
                                 <i class="fab fa-ethereum fa-5x"></i>
                             </span>
                             
-                            <router-link to="/">Portada</router-link>
+                            
                             </div>
                             <div>
                                 <p>Copyright SGL holdings 2021</p>
